@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0 20px;
+}
+header{
+    text-align: center;
+}
+#mainContainer{
+    width: 100%;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+#mainContainer #mid{
+    width:40%;
+
+}
+#mainContainer #left,#mainContainer #right{
+    width: 25%;
+   
+}
+
+.border{
+    border:2px solid black;
+}
+.todoListAdd{
+    width: 75%;
+    display: inline-block;
+}
+#submitItem{
+   
+    margin-left: 10px;;
+}
+form{
+    padding-left: 30px;
+    padding-top: 10px;;
+}
+/*complete .ejs style*/
+#completeTodo > .form-control{
+    margin-bottom: 25px;
+
+}
+.text{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+#subtaskList> .listItem{
+    margin-bottom: 15px;
+}
+/* add subtask button*/
+#addMoreSubtask{
+    display: inline-block;
+    text-align: center;
+
+}
+#addMoreSubtask span{
+    border-radius: 50%;
+    background-color: whitesmoke;
+    box-shadow: whitesmoke;
+}
+#addMoreSubtask:hover{
+    cursor: pointer;
+}
+#addMoreSubtask:hover::after{
+   content: 'click to add more subtask';
+}

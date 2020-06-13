@@ -4,3 +4,6 @@ module.exports.home=function(req,res){
     });
 
 };
+module.exports.addTodo=function(req,res){
+    res.send('okk');
+};

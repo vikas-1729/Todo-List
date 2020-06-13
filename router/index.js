@@ -7,4 +7,5 @@ const router=express.Router();
 const homeController= require('../controller/home');
 
 router.get('/',homeController.home);
+//router.post('/addTodo',homeController.addTodo);
 module.exports=router;

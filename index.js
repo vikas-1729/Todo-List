@@ -10,6 +10,9 @@ const port=8000;
 //connecting to db
 
 const db=require('./config/index');
+const { urlencoded } = require('express');
+//setting static folder
+app.use(express.static('assest'));
 app.set('view engine','ejs');
 app.set('views','views');
 //including router to handle incomeing request
