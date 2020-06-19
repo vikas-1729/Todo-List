@@ -7,14 +7,18 @@ const port=8000;
 //starting app
  const app=express();
 //setting views
+app.set('view engine','ejs');
+app.set('views','views');
+
 //connecting to db
 
 const db=require('./config/index');
-const { urlencoded } = require('express');
 //setting static folder
+//making urlencoded
+
+app.use(express.urlencoded());
+
 app.use(express.static('assest'));
-app.set('view engine','ejs');
-app.set('views','views');
 //including router to handle incomeing request
 app.use('/',require('./router/index'));
 

@@ -67,3 +67,14 @@ form{
 #addMoreSubtask:hover::after{
    content: 'click to add more subtask';
 }
+.text-center{
+    text-align: center;
+    color:limegreen;
+    
+    
+}
+#delete{
+    height:50px;
+    width: 100px;
+    opacity: 1;
+}

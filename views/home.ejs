@@ -16,7 +16,10 @@
        <!--dividing all body into three part left mid right-->
        <div id="mainContainer" class="border">
            <div id="left" class="border">
-
+            <% if(view==true){%>
+               <%- include('viewData.ejs'); -%>
+               <% } %>
+       
            </div>
            <div id="mid" class="border">
                <form action="/addTodo" method="post">
@@ -24,10 +27,42 @@
                    placeholder=" enter your task to add " autocomplete="off" required>
                 <button type="submit" class="btn btn-success" id="submitItem">ADD IT </button>
                </form>
+               <table class="table">
+                   <% if(data!=undefined&&data.length>0){ %>
+                    <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Mark</th>
+                          <th scope="col">TODO</th>
+                          <th scope="col">DUE-DATE</th>
+                          <th scope="col">VIEW IT</th>
+                          <th scope="col">DELETE</th>
+                        </tr>
+                      </thead>
+                      <% let k=0 %>    
+                    <% for(let item of locals.data) {%>
+                        <% let a1="1";%>
+                        <tr id=<%= k %>>
+                            <% let id= k ;%>
+                           <td><input type="checkbox"  name="checkbox" value=<%= id %>></td>
+                           <td><%=item['todo'] %></td>
+                           <td><%= item['due-date']  %></td>
+                           <td><button class="btn btn-primary" onclick="window.location='/viewMe?id=<%= item._id %>'">View</button></td>
+                           <td><button class="btn btn-danger"  onclick="window.location='/deleteMe?id=<%= item._id %>'">Delete</button></td>
+            
+                        </tr>
+                          <% k++%>
+                        <% }%>
+
+                   <% } %>
+
+               </table>
 
            </div>
            <div id="right" class="border">
-               <%- include('complete.ejs'); %>
+               <% if(complete==true){%>
+                <h1 class="text text-center"><%= locals.todo %></h1>
+               <%- include('complete.ejs'); -%>
+               <% } %>
            </div>
 
        </div>

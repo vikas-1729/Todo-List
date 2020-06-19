@@ -1,0 +1,49 @@
+<table class="table">
+    <tr scope="row">
+        <th scope="col">
+            todo
+        </th>
+        <td>
+            <%= viewData['todo'] %>
+        </td>
+    </tr>
+    <tr scope="row">
+        <th scope="col">
+            category
+        </th>
+        <td>
+            <%= viewData['category'] %>
+            <% if(viewData['category']===null){%>
+                <strong>-------</strong>
+          <% } %>
+         
+        </td>
+    </tr>
+    <tr scope="row">
+        <th scope="col">
+            due-date
+        </th>
+        <td>
+            <%= viewData['due-date'] %>
+            <% if(viewData['due-date']===null){%>
+                  <strong>-------</strong>
+            <% } %>
+           
+        </td>
+    </tr>
+<% for(let i=0;i<viewData['subtasks'].length;i++){ %>
+    <tr scope="row">
+        <th scope="col">
+            subtasks &nbsp;<%=i%>
+        </th>
+        <td>
+            <%= viewData['subtasks'][i] %>
+            <% if(viewData['subtasks'][i]===null){%>
+                <strong>-------</strong>
+          <% } %>
+         
+        </td>
+    </tr>
+    <% } %>
+
+</table>
