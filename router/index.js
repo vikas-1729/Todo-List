@@ -12,6 +12,7 @@ router.get('/',homeController.home);
 
 router.post('/addTodo',homeController.addTodo,homeController.home);
 
+//handling routes when we finally submit in db
 router.post('/addToDB',homeController.addToDB,homeController.home);
 
 

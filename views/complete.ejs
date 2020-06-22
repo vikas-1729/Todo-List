@@ -1,18 +1,18 @@
-
-<form action="/addToDB" method="post" class="form-group" id="completeTodo">
+<!-- it is after we try to add to our db -->
+<form action="/addToDB" method="post" class="form-group border" id="completeTodo">
     <input type="text" name="todo" value="<%= locals.todo %>" hidden >
     <label class="text">Enter your due date</label>
     <input type ="date" class="form-control" name="due-date" >
     <input type="text" class="form-control" name="category" placeholder="enter your category" autocomplete="off" >
     <label for="subtask" class="text">List Your Subtasks</label>
-    <ul id="subtaskList">
+    <ul id="subtaskList"><!-- subtasks when we try to add subtasks -->
         <li class="listItem">
             <input type="text" class="form-control" name="subtasks" placeholder="wrtite something">
 
         </li>
 
     </ul>
-    <div id="addMoreSubtask">
+    <div id="addMoreSubtask"><!-- it is for adding add mkore subtask-->
         <span><i class="fas fa-plus"></i></span>
     </div>
     <br>
