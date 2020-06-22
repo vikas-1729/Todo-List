@@ -2,7 +2,7 @@
 const express=require('express');
 
 // giving port no
-const port=8000;
+const port=process.env.PORT||8000;
 
 //starting app
  const app=express();
