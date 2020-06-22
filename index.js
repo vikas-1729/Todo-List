@@ -3,7 +3,13 @@ const express=require('express');
 
 // giving port no
 const port=process.env.PORT||8000;
-
+const { Pool } = require('pg');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 //starting app
  const app=express();
 //setting views

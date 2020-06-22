@@ -7,7 +7,18 @@ const router=express.Router();
 const homeController= require('../controller/home');
 //handling base route
 router.get('/',homeController.home);
-
+router.get('/db', async (req, res) => {
+    try {
+      const client = await pool.connect();
+      const result = await client.query('SELECT * FROM test_table');
+      const results = { 'results': (result) ? result.rows : null};
+      res.render('pages/db', results );
+      client.release();
+    } catch (err) {
+      console.error(err);
+      res.send("Error " + err);
+    }
+  });
 //handling route when we add a todo list
 
 router.post('/addTodo',homeController.addTodo,homeController.home);
