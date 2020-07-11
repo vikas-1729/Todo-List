@@ -8,8 +8,10 @@
 
  we can view and checkbox we can also delete it
 
- i have also add 3 screenshot of pic
- 
+
+![alt text](https://github.com/vikas-1729/Todo-List/blob/Todo-List/Screenshots/Screenshot_2020-06-20%20vikas(1).png)
+![alt text](https://github.com/vikas-1729/Todo-List/blob/Todo-List/Screenshots/Screenshot_2020-06-20%20vikas(2).png)
+![alt text](https://github.com/vikas-1729/Todo-List/blob/Todo-List/Screenshots/Screenshot_2020-06-20%20vikas.png)
 
 
 
